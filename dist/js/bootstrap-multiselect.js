@@ -470,10 +470,10 @@
             templates: {
                 // AK 2024-04-16: unfortunately '.custom-select' class not supported in BS5.
                 // .custom-select was an icon with tiny up-down arrows on the left of dropdown box. Let's use .form-select for BS5.
-                button: '<button type="button" class="form-select multiselect dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown"><span class="multiselect-selected-text"></span></button>', // AK: BS5 fix: https://github.com/davidstutz/bootstrap-multiselect/pull/1254/files
+                button: '<button type="button" class="form-select multiselect dropdown-toggle" data-bs-toggle="dropdown"><span class="multiselect-selected-text"></span></button>', // AK: BS5 fix: https://github.com/davidstutz/bootstrap-multiselect/pull/1254/files
                 //button: '<button type="button" class="multiselect dropdown-toggle btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false"><span class="multiselect-selected-text"></span></button>', // alternative for BS5, with buttons
-                popupContainer: '<div class="multiselect-container dropdown-menu"></div>',
-                filter: '<div class="multiselect-filter d-flex align-items-center"><i class="fas fa-sm fa-search text-muted"></i><input type="search" class="multiselect-search form-control" /></div>',
+                popupContainer: '<div class="multiselect-container dropdown-menu w-100"></div>',
+                filter: '<div class="multiselect-filter d-flex align-items-center"><i class="bi bi-search text-muted"></i><input type="search" class="multiselect-search form-control" /></div>',
                 buttonGroup: '<div class="multiselect-buttons btn-group" style="display:flex;"></div>',
                 buttonGroupReset: '<button type="button" class="multiselect-reset btn btn-secondary btn-block"></button>',
                 option: '<button type="button" class="multiselect-option dropdown-item"></button>',
@@ -540,13 +540,13 @@
             if (me.options.buttonTextAlignment) {
                 switch (me.options.buttonTextAlignment) {
                     case 'left':
-                        me.$button.addClass('text-left');
+                        me.$button.addClass('text-start');
                         break;
                     case 'center':
                         me.$button.addClass('text-center');
                         break;
                     case 'right':
-                        me.$button.addClass('text-right');
+                        me.$button.addClass('text-end');
                         break;
                 }
             }
